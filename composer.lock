@@ -1,0 +1,508 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
+    ],
+    "hash": "1f6ba80715ed9828c2f0ef8d7e3c2b27",
+    "packages": [
+        {
+            "name": "splitice/radical-basic",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/splitice/radical-basic.git",
+                "reference": "b41cccfc159f3a72c389c256fdabdfe56a010a9f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/splitice/radical-basic/zipball/b41cccfc159f3a72c389c256fdabdfe56a010a9f",
+                "reference": "b41cccfc159f3a72c389c256fdabdfe56a010a9f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4",
+                "splitice/radical-common": "*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Radical": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD"
+            ],
+            "description": "Basic radical-php functionality",
+            "keywords": [
+                "radical-php"
+            ],
+            "time": "2013-12-20 05:08:04"
+        },
+        {
+            "name": "splitice/radical-common",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/splitice/radical-common.git",
+                "reference": "56ae78d6f7e93496e1a70e015c918379d8686431"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/splitice/radical-common/zipball/56ae78d6f7e93496e1a70e015c918379d8686431",
+                "reference": "56ae78d6f7e93496e1a70e015c918379d8686431",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4",
+                "symfony/filesystem": "2.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Radical": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "radical-common",
+            "keywords": [
+                "radical-php"
+            ],
+            "time": "2013-12-24 07:34:41"
+        },
+        {
+            "name": "splitice/radical-db",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/splitice/radical-db.git",
+                "reference": "415937fba77465cb2626a08d8fbb5c8672733e13"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/splitice/radical-db/zipball/415937fba77465cb2626a08d8fbb5c8672733e13",
+                "reference": "415937fba77465cb2626a08d8fbb5c8672733e13",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4",
+                "splitice/radical-basic": "*",
+                "splitice/radical-common": "*",
+                "symfony/validator": "2.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Radical": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "keywords": [
+                "radical-php"
+            ],
+            "time": "2013-12-24 07:34:32"
+        },
+        {
+            "name": "splitice/radical-file",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/splitice/radical-file.git",
+                "reference": "c75a7b1fd7f8cf3c14102d89c72baf1c9324216e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/splitice/radical-file/zipball/c75a7b1fd7f8cf3c14102d89c72baf1c9324216e",
+                "reference": "c75a7b1fd7f8cf3c14102d89c72baf1c9324216e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4",
+                "splitice/radical-common": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Radical": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "radical-php",
+            "keywords": [
+                "radical-php"
+            ],
+            "time": "2013-12-19 10:25:24"
+        },
+        {
+            "name": "splitice/radical-html",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/splitice/radical-html.git",
+                "reference": "9f3e008ca1797624bc01e4723715a26d9c86ffaf"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/splitice/radical-html/zipball/9f3e008ca1797624bc01e4723715a26d9c86ffaf",
+                "reference": "9f3e008ca1797624bc01e4723715a26d9c86ffaf",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Radical": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "radical-html",
+            "keywords": [
+                "radical-php"
+            ],
+            "time": "2013-12-19 08:08:16"
+        },
+        {
+            "name": "splitice/radical-net",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/splitice/radical-net.git",
+                "reference": "7bd66f274aada53e56a0b9b05dc83ad3d705e334"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/splitice/radical-net/zipball/7bd66f274aada53e56a0b9b05dc83ad3d705e334",
+                "reference": "7bd66f274aada53e56a0b9b05dc83ad3d705e334",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4",
+                "splitice/radical-basic": "dev-master",
+                "splitice/radical-common": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Radical": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "radical-net",
+            "keywords": [
+                "radical-php"
+            ],
+            "time": "2013-12-24 07:34:04"
+        },
+        {
+            "name": "splitice/radical-web",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/splitice/radical-web.git",
+                "reference": "1fc26149c7e83cccfa7cda2bca415090abd1191e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/splitice/radical-web/zipball/1fc26149c7e83cccfa7cda2bca415090abd1191e",
+                "reference": "1fc26149c7e83cccfa7cda2bca415090abd1191e",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4",
+                "splitice/radical-basic": "dev-master",
+                "splitice/radical-common": "dev-master",
+                "splitice/radical-file": "dev-master",
+                "splitice/radical-html": "dev-master",
+                "splitice/radical-net": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Radical": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "radical-web",
+            "keywords": [
+                "radical-php"
+            ],
+            "time": "2013-12-24 07:33:49"
+        },
+        {
+            "name": "splitice/radical-web-api",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/splitice/radical-web-api.git",
+                "reference": "db22c88cc2fb0d5ea8fa3e1406598c72dd85b9ab"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/splitice/radical-web-api/zipball/db22c88cc2fb0d5ea8fa3e1406598c72dd85b9ab",
+                "reference": "db22c88cc2fb0d5ea8fa3e1406598c72dd85b9ab",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4",
+                "splitice/radical-web": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Radical": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "description": "radical-php",
+            "keywords": [
+                "radical-php"
+            ],
+            "time": "2013-12-24 07:33:28"
+        },
+        {
+            "name": "symfony/filesystem",
+            "version": "v2.4.0",
+            "target-dir": "Symfony/Component/Filesystem",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Filesystem.git",
+                "reference": "79acd777762e81d0f3414ca25a602deeeb48240d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Filesystem/zipball/79acd777762e81d0f3414ca25a602deeeb48240d",
+                "reference": "79acd777762e81d0f3414ca25a602deeeb48240d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Filesystem\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Filesystem Component",
+            "homepage": "http://symfony.com",
+            "time": "2013-11-16 15:13:54"
+        },
+        {
+            "name": "symfony/property-access",
+            "version": "dev-master",
+            "target-dir": "Symfony/Component/PropertyAccess",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/PropertyAccess.git",
+                "reference": "9935cedf9a7d089346475a4805059923fcf15c52"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/PropertyAccess/zipball/9935cedf9a7d089346475a4805059923fcf15c52",
+                "reference": "9935cedf9a7d089346475a4805059923fcf15c52",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\PropertyAccess\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony PropertyAccess Component",
+            "homepage": "http://symfony.com",
+            "keywords": [
+                "access",
+                "array",
+                "extraction",
+                "index",
+                "injection",
+                "object",
+                "property",
+                "property path",
+                "reflection"
+            ],
+            "time": "2013-12-23 14:13:24"
+        },
+        {
+            "name": "symfony/translation",
+            "version": "dev-master",
+            "target-dir": "Symfony/Component/Translation",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Translation.git",
+                "reference": "478cca9fd8bc1e8ced4159ab26f0e7c08ec7571b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Translation/zipball/478cca9fd8bc1e8ced4159ab26f0e7c08ec7571b",
+                "reference": "478cca9fd8bc1e8ced4159ab26f0e7c08ec7571b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "symfony/config": "~2.0",
+                "symfony/yaml": "~2.2"
+            },
+            "suggest": {
+                "symfony/config": "",
+                "symfony/yaml": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.5-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Translation\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Translation Component",
+            "homepage": "http://symfony.com",
+            "time": "2013-11-28 10:27:35"
+        },
+        {
+            "name": "symfony/validator",
+            "version": "v2.4.0",
+            "target-dir": "Symfony/Component/Validator",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/Validator.git",
+                "reference": "12d1f1e64a43ce9cc35151ca89dae1ae8882d991"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/Validator/zipball/12d1f1e64a43ce9cc35151ca89dae1ae8882d991",
+                "reference": "12d1f1e64a43ce9cc35151ca89dae1ae8882d991",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "symfony/property-access": "~2.2",
+                "symfony/translation": "~2.0"
+            },
+            "require-dev": {
+                "doctrine/annotations": "~1.0",
+                "doctrine/cache": "~1.0",
+                "symfony/config": "~2.2",
+                "symfony/http-foundation": "~2.1",
+                "symfony/intl": "~2.3",
+                "symfony/yaml": "~2.0"
+            },
+            "suggest": {
+                "doctrine/annotations": "For using the annotation mapping. You will also need doctrine/cache.",
+                "doctrine/cache": "For using the default cached annotation reader",
+                "symfony/config": "",
+                "symfony/http-foundation": "",
+                "symfony/intl": "",
+                "symfony/yaml": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "2.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-0": {
+                    "Symfony\\Component\\Validator\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "http://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Validator Component",
+            "homepage": "http://symfony.com",
+            "time": "2013-11-28 10:27:26"
+        }
+    ],
+    "packages-dev": [
+
+    ],
+    "aliases": [
+
+    ],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "splitice/radical-web": 20,
+        "splitice/radical-web-api": 20,
+        "splitice/radical-db": 20
+    },
+    "platform": {
+        "php": ">=5.4"
+    },
+    "platform-dev": [
+
+    ]
+}
