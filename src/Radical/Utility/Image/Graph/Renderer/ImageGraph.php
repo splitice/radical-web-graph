@@ -102,8 +102,7 @@ abstract class ImageGraph {
 		if($graph->title){
 			$pChart->setFontProperties("tahoma.ttf",10);
 		
-			$size = new \Basic\String\Size($graph->title,$pChart->getFont("tahoma.ttf"));
-		
+			$size = new \Radical\Basic\String\Size($graph->title,$pChart->getFont("tahoma.ttf"));
 			$pChart->drawTitle($size->getCenteredLeft($graph->box->width),22,$graph->title,50,50,50);
 		}
 		

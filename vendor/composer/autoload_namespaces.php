@@ -10,5 +10,5 @@ return array(
     'Symfony\\Component\\Translation\\' => array($vendorDir . '/symfony/translation'),
     'Symfony\\Component\\PropertyAccess\\' => array($vendorDir . '/symfony/property-access'),
     'Symfony\\Component\\Filesystem\\' => array($vendorDir . '/symfony/filesystem'),
-    'Radical' => array($baseDir . '/src', $vendorDir . '/splitice/radical-common/src', $vendorDir . '/splitice/radical-file/src', $vendorDir . '/splitice/radical-basic/src', $vendorDir . '/splitice/radical-net/src', $vendorDir . '/splitice/radical-html/src', $vendorDir . '/splitice/radical-web/src', $vendorDir . '/splitice/radical-web-api/src', $vendorDir . '/splitice/radical-db/src'),
+    'Radical' => array($baseDir . '/src', $vendorDir . '/splitice/radical-file/src', $vendorDir . '/splitice/radical-basic/src', $vendorDir . '/splitice/radical-net/src', $vendorDir . '/splitice/radical-html/src', $vendorDir . '/splitice/radical-web/src', $vendorDir . '/splitice/radical-web-api/src', $vendorDir . '/splitice/radical-db/src', $vendorDir . '/splitice/radical-common/src'),
 );

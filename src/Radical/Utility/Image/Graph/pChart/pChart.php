@@ -3779,7 +3779,7 @@ class pChart {
 	 * Validate data contained in the data array
 	 */
 	function validateData($FunctionName, $Data) {
-		if (! $Data) {
+		if ($Data) {
 			$DataSummary = array ();
 			
 			foreach ( $Data as $key => $Values ) {
