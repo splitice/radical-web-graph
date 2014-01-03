@@ -1661,6 +1661,7 @@ class pChart {
 					$XLast = - 1;
 					$lw = $this->LineWidth;
 					$this->LineWidth = 2;
+					$YLast = null;
 					foreach ( $Data as $Key => $Values ) {
 						if (isset ( $Data [$Key] [$ColName] )) {
 							$Value = $Data [$Key] [$ColName];
@@ -1768,6 +1769,7 @@ class pChart {
 				for($k = $Index - 1; $k >= 1; $k --)
 					$Yt [$k] = $Yt [$k] * $Yt [$k + 1] + $U [$k];
 				
+				$YLast = null;
 				$XPos = $this->GArea_X1 + $this->GAreaXOffset;
 				for($X = 1; $X <= $Index; $X = $X + $Accuracy) {
 					$klo = 1;
@@ -2355,6 +2357,8 @@ class pChart {
 				$TRadius = $RadiusScale * $t;
 				$LastX1 = - 1;
 				
+				$LastY1 = $LastY2 = $LastX2 = null;
+				
 				for($i = 0; $i <= $Points; $i ++) {
 					$Angle = - 90 + $i * 360 / $Points;
 					$X1 = cos ( $Angle * self::PI / 180 ) * $TRadius + $XCenter;
@@ -2391,6 +2395,7 @@ class pChart {
 		for($t = 1; $t <= $MaxValue; $t ++) {
 			$TRadius = ($Radius / $MaxValue) * $t;
 			$LastX = - 1;
+			$LastY = null;
 			
 			for($i = 0; $i <= $Points; $i ++) {
 				$Angle = - 90 + $i * 360 / $Points;
@@ -2507,6 +2512,7 @@ class pChart {
 			
 			$Angle = - 90;
 			$XLast = - 1;
+			$YLast = null;
 			foreach ( $Data as $Key => $Values ) {
 				if (isset ( $Data [$Key] [$ColName] )) {
 					$Value = $Data [$Key] [$ColName];
@@ -3845,7 +3851,7 @@ class pChart {
 			return ($Go . "." . $Mo . "g");
 		}
 		if ($Mo != 0) {
-			return ($Mo . "." . $ko . "m");
+			return ($Mo . "." . $Ko . "m");
 		}
 		if ($Ko != 0) {
 			return ($Ko . "." . $o) . "k";
