@@ -8,6 +8,7 @@ class Database extends Internal\GraphBase {
 	 * @var Result
 	 */
 	protected $res;
+	public $axisNameFilter = null;
 	
 	function __construct(Result $res,$format = 'number',$title = null){
 		$this->res = $res;
@@ -43,6 +44,16 @@ class Database extends Internal\GraphBase {
 				}
 			}
 		}
+		
+		if($this->axisNameFilter){
+			$a = $this->axisNameFilter;
+			$new_data = array();
+			foreach($data as $k=>$v){
+				$new_data[$a($k)] = $v;
+			}
+			$data = $new_data;
+		}
+		
 		$this->data = $data;
 		return $this->data;
 	}

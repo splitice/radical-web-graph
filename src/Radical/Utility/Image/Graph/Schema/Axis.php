@@ -6,5 +6,5 @@ class Axis extends Internal\SchemaBase {
 	public $label;
 	public $labelSkip = 1;
 	public $symbol = null;
-	public $autosize = true;
+	public $autoSize = true;
 }
