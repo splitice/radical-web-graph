@@ -58,7 +58,6 @@ abstract class ImageGraph {
 			}
 		}
 		
-		//die(var_dump($dataSet));
 		// Initialise the graph
 		if($graph->type == 'line' || $graph->type == 'plot'){
 			$pChart->setFontProperties("tahoma.ttf",8);
@@ -115,7 +114,7 @@ abstract class ImageGraph {
 				$radius = max($graph->box->width/2, $graph->box->height/2) - (self::BORDER);
 				//Only draw if there is data
 				foreach($data as $v){
-					if($v['s0']){
+					if(!empty($v['s0'])){
 						$pChart->drawPieGraph($data, $dataSet->GetDataDescription(), $graph->box->width/2, $graph->box->height/2, $radius, pChart::PIE_PERCENTAGE);
 						break;
 					}

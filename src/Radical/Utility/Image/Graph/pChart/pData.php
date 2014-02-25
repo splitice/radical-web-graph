@@ -30,7 +30,7 @@ namespace Radical\Utility\Image\Graph\pChart;
 	var $DataDescription;
 	
 	function __construct() {
-		$this->Data = "";
+		$this->Data = array();
 		$this->DataDescription = "";
 		$this->DataDescription ["Position"] = "Name";
 		$this->DataDescription ["Format"] ["X"] = "number";
