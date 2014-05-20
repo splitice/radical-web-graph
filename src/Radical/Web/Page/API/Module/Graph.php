@@ -52,12 +52,12 @@ class Graph extends APIBase {
 			$module = new $class($arguments);
 			$graph = $module->{$this->graph}();
 		}
-		
+
 		//Do the rendering
 		if($graph instanceof IGraphSource){
 			$graph->Setup($this->width,$this->height);
 			ob_start();
-			if($this->type == 'json'){
+			if($this->type == 'json' || $this->type == 'ps' || $this->type == 'xml'){
 				$ret = $graph->Draw(new Renderer\JSON());
 			}elseif($this->type == 'kendo'){
 				$ret = $graph->Draw(new Renderer\Kendo());

@@ -22,7 +22,7 @@ abstract class GraphBase implements IGraphSource {
 	}
 	function draw(IRenderable $R){
 		$this->schema->data->SetAll($this->getData());
-		
+
 		return $R->Output($this->schema);
 	}
 }
