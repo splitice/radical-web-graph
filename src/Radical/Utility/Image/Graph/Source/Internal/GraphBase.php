@@ -1,9 +1,9 @@
 <?php
 namespace Radical\Utility\Image\Graph\Source\Internal;
 
-use Radical\Utility\Image\Graph\Source\IGraphSource;
 use Radical\Utility\Image\Graph\Renderer\IRenderable;
 use Radical\Utility\Image\Graph\Schema;
+use Radical\Utility\Image\Graph\Source\IGraphSource;
 
 abstract class GraphBase implements IGraphSource {
 	public $schema;

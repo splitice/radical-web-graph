@@ -1,7 +1,7 @@
 <?php
 namespace Radical\Web\Page\API\Module;
-use Radical\Utility\Image\Graph\Source\IGraphSource;
 use Radical\Utility\Image\Graph\Renderer;
+use Radical\Utility\Image\Graph\Source\IGraphSource;
 
 class Graph extends APIBase {
 	private $graph;
@@ -32,8 +32,8 @@ class Graph extends APIBase {
 				return true;
 		}
 	}
-	private function _getModule($module,$ns = 'DB'){
-		return \Radical\Core\Libraries::getProjectSpace($ns.'\\'.ucfirst($module));
+	protected function _getModule($module,$ns = 'DB'){
+		return \Radical\Core\Libraries::getProjectSpace($ns.'\\Web\\'.ucfirst($module));
 	}
 	function can($module){		
 		return class_exists($this->_getModule($module)) || class_exists($this->_getModule($module,'Graph'));

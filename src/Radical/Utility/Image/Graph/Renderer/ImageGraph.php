@@ -2,9 +2,9 @@
 namespace Radical\Utility\Image\Graph\Renderer;
 
 use Radical\Utility\Image\Graph\pChart\Color;
-use Radical\Utility\PHP\Extension;
 use Radical\Utility\Image\Graph\pChart\pChart;
 use Radical\Utility\Image\Graph\pChart\pData;
+use Radical\Utility\PHP\Extension;
 
 abstract class ImageGraph {
 	const BORDER = 40;
