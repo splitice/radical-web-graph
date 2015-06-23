@@ -33,10 +33,10 @@ class Graph extends APIBase {
 		}
 	}
 	protected function _getModule($module,$ns = 'DB'){
-		return \Radical\Core\Libraries::getProjectSpace($ns.'\\Web\\'.ucfirst($module));
+		return \Radical\Core\Libraries::getProjectSpace($ns.'\\'.ucfirst($module));
 	}
 	function can($module){		
-		return class_exists($this->_getModule($module)) || class_exists($this->_getModule($module,'Graph'));
+		return class_exists($this->_getModule($module)) || class_exists($this->_getModule($module,'Web\\Graph'));
 	}
 	function __call($module,$arguments){
 		//Work out what we are going to display
@@ -48,7 +48,7 @@ class Graph extends APIBase {
 				$graph = $class::$method($this->data);
 			}
 		}else{
-			$class = $this->_getModule($module,'Graph');
+			$class = $this->_getModule($module,'Web\\Graph');
 			$module = new $class($arguments);
 			$graph = $module->{$this->graph}();
 		}
