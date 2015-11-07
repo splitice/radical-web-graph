@@ -25,7 +25,7 @@ class Graph extends APIBase {
 		if($type == 'kendo') return 'json';
 		return $type;
 	}
-	static function canType($type){
+	function canType($type){
 		switch($type){
 			case 'kendo':
 			case 'png':
