@@ -21,11 +21,11 @@ class Graph extends APIBase {
 		
 		parent::__construct($data,$type);
 	}
-	function output_type($type){
+	function _output_type($type){
 		if($type == 'kendo') return 'json';
 		return $type;
 	}
-	function canType($type){
+	function _canType($type){
 		switch($type){
 			case 'kendo':
 			case 'png':
@@ -35,7 +35,7 @@ class Graph extends APIBase {
 	protected function _getModule($module,$ns = 'DB'){
 		return \Radical\Core\Libraries::getProjectSpace($ns.'\\'.ucfirst($module));
 	}
-	function can($module){		
+	function _can($module){
 		return class_exists($this->_getModule($module)) || class_exists($this->_getModule($module,'Web\\Graph'));
 	}
 	function __call($module,$arguments){
@@ -64,29 +64,25 @@ class Graph extends APIBase {
 			}else{
 				$ret = $graph->Draw(new Renderer\Output());
 			}
-			if($ret === null){
-				$ret = ob_get_contents();
-			}
-			ob_end_clean();
-		
-			return $ret;
 		}elseif($graph instanceof \Radical\Utility\Image\Graph\Schema\Graph){
 			$graph->box->width = $this->width;
 			$graph->box->height = $this->height;
 			ob_start();
-			if($this->type == 'json'){
+			if($this->type == 'json' || $this->type == 'ps' || $this->type == 'xml'){
 				$ret = $graph->render(new Renderer\JSON());
 			}elseif($this->type == 'kendo'){
 				$ret = $graph->render(new Renderer\Kendo());
 			}else{
 				$ret = $graph->render(new Renderer\Output());
 			}
-			if($ret === null){
-				$ret = ob_get_contents();
-			}
-			ob_end_clean();
-		
-			return $ret;
+		}else{
+			throw new \Exception('Unknown Graph definition type');
 		}
+
+		if($ret === null){
+			$ret = ob_get_contents();
+		}
+		ob_end_clean();
+		return $ret;
 	}
 }
