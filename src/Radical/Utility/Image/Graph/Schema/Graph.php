@@ -8,6 +8,9 @@ class Graph extends Internal\SchemaBase {
 	 * @var Dataset
 	 */
 	public $data;
+	/**
+	 * @var Axis[]
+	 */
 	public $axis = array();
 	public $title;
 	public $hover;
