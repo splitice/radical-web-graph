@@ -31,12 +31,10 @@ namespace Radical\Utility\Image\Graph\pChart;
 	
 	function __construct() {
 		$this->Data = array();
-		$this->DataDescription = "";
+		$this->DataDescription = array();
 		$this->DataDescription ["Position"] = "Name";
-		$this->DataDescription ["Format"] ["X"] = "number";
-		$this->DataDescription ["Format"] ["Y"] = "number";
-		$this->DataDescription ["Unit"] ["X"] = NULL;
-		$this->DataDescription ["Unit"] ["Y"] = NULL;
+		$this->DataDescription ["Format"] = array( "X" => "number", "Y" => "number" );
+        $this->DataDescription ["Unit"] = array( "X" => null, "Y" => null );
 	}
 	
 	function importFromCSV($FileName, $Delimiter = ",", $DataColumns = -1, $HasHeader = FALSE, $DataName = -1) {
@@ -170,6 +168,7 @@ namespace Radical\Utility\Image\Graph\pChart;
 	}
 	
 	function setXAxisFormat($Format = "number") {
+	    if(!isset($this->DataDescription ["Format"])) $this->DataDescription ["Format"] = array();
 		$this->DataDescription ["Format"] ["X"] = $Format;
 	}
 	

@@ -385,8 +385,8 @@ class pChart {
 			if (isset ( $DataDescription ["Values"] [0] )) {
 				$this->VMax = $this->VMin = $Data [0] [$DataDescription ["Values"] [0]];
 			} else {
-				$this->VMin = 2147483647;
-				$this->VMax = - 2147483647;
+				$this->VMin = PHP_INT_MAX;
+				$this->VMax = PHP_INT_MIN;
 			}
 			
 			/*
@@ -414,28 +414,33 @@ class pChart {
 					}
 				}
 			} elseif ($ScaleMode == self::SCALE_ADDALL || $ScaleMode == self::SCALE_ADDALLSTART0 ) /* Experimental */
-        {
+        	{
 				if ($ScaleMode == self::SCALE_ADDALLSTART0) {
 					$this->VMin = 0;
 				}
-				
-				foreach ( $Data as $Key => $Values ) {
-					$Sum = 0;
-					foreach ( $DataDescription ["Values"] as $Key2 => $ColName ) {
-						if (isset ( $Data [$Key] [$ColName] )) {
-							$Value = $Data [$Key] [$ColName];
-							if (is_numeric ( $Value ))
-								$Sum += $Value;
+
+				if($Data){
+					foreach ( $Data as $Key => $Values ) {
+						$Sum = 0;
+						foreach ( $DataDescription ["Values"] as $Key2 => $ColName ) {
+							if (isset ( $Data [$Key] [$ColName] )) {
+								$Value = $Data [$Key] [$ColName];
+								if (is_numeric ( $Value ))
+									$Sum += $Value;
+							}
+						}
+						if ($this->VMax < $Sum) {
+							$this->VMax = $Sum;
+						}
+						if ($this->VMin > $Sum) {
+							$this->VMin = $Sum;
 						}
 					}
-					if ($this->VMax < $Sum) {
-						$this->VMax = $Sum;
-					}
-					if ($this->VMin > $Sum) {
-						$this->VMin = $Sum;
-					}
 				}
+        	}else{
+        		$this->VMax = 0;
 			}
+
 			
 			if ($this->VMax > preg_replace ( '/\.[0-9]+/', '', $this->VMax ))
 				$this->VMax = preg_replace ( '/\.[0-9]+/', '', $this->VMax ) + 1;
@@ -3055,7 +3060,7 @@ class pChart {
 		for($i = $SpliceHeight - 1; $i >= 1; $i --) {
 			foreach ( $iValues as $Key => $Value ) {
 				$C_GraphLo = self::AllocateColor ( $this->Picture, $this->Palette [$Key]->R, $this->Palette [$Key]->G, $this->Palette [$Key]->B, - 10 );
-				$Plots = "";
+				$Plots = array();
 				$Plot = 0;
 				foreach ( $TopPlots [$Key] as $Key2 => $Value2 ) {
 					$Plot ++;

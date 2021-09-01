@@ -23,11 +23,11 @@ class Database extends Internal\GraphBase {
 		$data = array();
 		foreach($this->res->Fetch(Fetch::ALL_ASSOC) as $i=>$row){
 			foreach($row as $k=>$v){
-				if($k{0} == '|'){//Skip
+				if($k[0] == '|'){//Skip
 					continue;
 				}
 				
-				if($k{0} == '*'){
+				if($k[0] == '*'){
 					$k2 = '|'.substr($k,1);
 					if(isset($row[$k2])){
 						$k = $row[$k2];

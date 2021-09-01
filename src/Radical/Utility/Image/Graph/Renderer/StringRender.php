@@ -1,7 +1,7 @@
 <?php
 namespace Radical\Utility\Image\Graph\Renderer;
 
-class String extends RawRender {
+class StringRender extends RawRender {
 	function output(\Radical\Utility\Image\Graph\Schema\Graph $pChart){
 		ob_start();
 		parent::Output($pChart);
